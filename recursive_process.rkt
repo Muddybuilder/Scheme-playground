@@ -1,5 +1,5 @@
 ; Linear iterative Process
-; Expansion (build up of chain of deffered operations) followed by contraction.
+; The process does not grow or shink as it evolves.
 (define (factorial n)
   (fact-iter 1 1 n))
 (define (fact-iter product counter max-count)
@@ -12,7 +12,7 @@
   )
 
 ; Linear recursive process
-; The process does not grow or shink as it evolves.
+; Expansion (build up of chain of deffered operations) followed by contraction.
 (define (fact2 n)
   (if (< n 1)
       1
