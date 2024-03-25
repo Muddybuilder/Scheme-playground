@@ -33,10 +33,20 @@
         )
   )
 
+;using regular procedure names
 (define (sum-cube a b)
     (sum cube a inc b)
 )
 
 (define (sum-int a b)
     (sum identity a inc b)
+)
+
+;using lambda, avoid explicit procedure definition
+(define (sum-cube a b)
+    (sum (lambda (x) (* x x x)) a (lambda (x) (+ x 1) ) b)
+    )
+
+(define (sum-int a b)
+    (sum (lambda (x) x) a (lambda (x) (+ x 1) ) b)
 )
